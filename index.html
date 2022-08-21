@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 <div id="header">
@@ -25,5 +26,62 @@
         </div>
     </div>
 </div>
+<!-- ---------------------about---------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+        <div class="about-col-1">
+            <img src="images/VPRM.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I'm Vijaya Pratap Reddy M. I am currently pursuing my B'Tech Degree in Computer Science Engineering from Indian Institute of Information Technology Trichy.
+                I would describe myself as a happy,confident and determined person who is a very fast learner,and who is always hungry to learn and improve.
+                Apart from academics i keep myself fit and active, which ensures my energy and concentration levels are at optimum level.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Programming Languages</span><br>C ,C++ ,Python ,Javascript</li>
+                    <li><span>Web Devolpment</span><br>HTML,CSS,Bootstrap,jQuery</li>
+                    <li><span>Systems</span><br>Windows,Ubuntu</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2020-present</span><br>Indian Institute of Information Technology Tiruchirappalli</li>
+                    <li><span>2020</span><br>Narayana Residential PU College, Cheemasandra, Bangalore</li>
+                    <li><span>2018</span><br>Narayana E-Techno School, Vidyaranyapura, Bangalore</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span></span><br></li>
+                    <li><span></span><br></li>
+                    <li><span></span><br></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks =document.getElementsByClassName("tab-links")
+    var tabcontents =document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
 </html>
